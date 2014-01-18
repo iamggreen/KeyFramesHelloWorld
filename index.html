@@ -5,6 +5,7 @@
 </head>
 <body>
 
+<div id="container">
 <div id="sky" class="target">
 	<div id="cloud" class="target">
 		<div class="cloud cloud-1"></div>
@@ -23,10 +24,26 @@
 	
 </div>
 
-<script type="text/javascript" src="live.js"></script>
+<div>
+	<button id="start-animation">Start Animation</button>
+</div>
+
+</container>
+
+<!--<script type="text/javascript" src="live.js"></script>-->
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 <script type="text/javascript">
-	var targets = document.querySelectorAll("#sky.target,#sky .target");
-	Array.prototype.slice.call(targets).forEach(function(target) { target.className += " animate"; });	
+	var started = false;
+	$("#start-animation").click(function() { 
+		if(!started) {
+			$(this).text("Reset Animation");
+		} else { 
+			$(this).text("Start Animation");
+		}
+		$(".target").toggleClass("animate");
+		started = !started;
+		
+	});
 </script>
 </body>
 </html>

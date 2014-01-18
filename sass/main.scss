@@ -33,6 +33,19 @@
 	}
 }
 
+#container {
+	width: 500px;
+	margin: 0px auto;
+}
+
+#start-animation {
+	margin: 20px 0 0 195px;
+	padding: 5px;
+}
+
+
+
+
 @import 'sky';
 @import 'ground';
 @import 'sun';
