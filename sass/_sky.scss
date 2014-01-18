@@ -1,0 +1,31 @@
+p {
+@include vendor-prefix(hyphens, auto);
+}
+
+#sky {
+	width: 500px;
+	height: 500px;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	background-color: #525252;
+	margin: 0px auto;
+}
+
+#sky.animate {
+	@include vendor-prefix(animation-name,sky);
+	@include vendor-prefix(animation-duration,10s);
+	@include vendor-prefix(animation-timing-function,ease);
+	@include vendor-prefix(animation-iteration-count,1);
+	@include vendor-prefix(animation-direction,normal);
+	@include vendor-prefix(animation-delay,0);
+	@include vendor-prefix(animation-play-state,running);
+	@include vendor-prefix(animation-fill-mode,forwards);
+}
+
+@include keyframes(sky) {
+	0% { background-color: #525252; }
+	33% { background-color: #6293e5; }
+	66% { background-color: #6293e5; }
+	100% { background-color: #525252; }
+}

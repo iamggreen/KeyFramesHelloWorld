@@ -1,0 +1,47 @@
+#sun {
+	background: #ffd630;
+	width: 130px;
+	height: 130px;
+	position: absolute;
+	border-radius: 70px;
+	z-index: 2;
+	bottom: 0;
+	left: 340px;
+}
+
+#sun.animate {
+	@include vendor-prefix(animation-name,sunrise);
+	@include vendor-prefix(animation-duration,10s);
+	@include vendor-prefix(animation-timing-function,ease);
+	@include vendor-prefix(animation-iteration-count,1);
+	@include vendor-prefix(animation-direction,normal);
+	@include vendor-prefix(animation-delay,0);
+	@include vendor-prefix(animation-play-state,running);
+	@include vendor-prefix(animation-fill-mode,forwards);
+}
+
+@include keyframes(sunrise) {
+	0% {
+		bottom: 0;
+		left: 340px;
+		background: #f00;
+	}
+	
+	33% {
+		bottom: 340px;
+		left: 340px;
+		background: #ffd630;
+	}
+
+	66% {
+		bottom: 340px;
+		left: 40px;
+		background: #ffd630;
+	}
+
+	100% {
+		bottom: 0;
+		left: 40px;
+		background: #f00;
+	}
+}

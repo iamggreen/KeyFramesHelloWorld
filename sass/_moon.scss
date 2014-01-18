@@ -1,0 +1,56 @@
+#moon {
+	position: relative;
+	opacity: 0;
+	top: 50px;
+	left: -100px;
+}
+
+#moon.animate {
+	@include vendor-prefix(animation-name,moon);
+	@include vendor-prefix(animation-duration,10s);
+	@include vendor-prefix(animation-timing-function,ease);
+	@include vendor-prefix(animation-iteration-count,1);
+	@include vendor-prefix(animation-direction,normal);
+	@include vendor-prefix(animation-delay,0);
+	@include vendor-prefix(animation-play-state,running);
+	@include vendor-prefix(animation-fill-mode,forwards);
+}
+
+@include keyframes(moon) {
+
+	0% {
+		opacity: 0;
+		left: -100px;
+	}
+	
+	50% {
+		opacity: 0;
+		left: -100px;
+	}
+	
+	90% {
+		opacity: 0;
+		left: -100px;
+	}
+	
+	100% {
+		opacity: 1;
+		left: 50px;
+	}
+
+}
+
+.moon {
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+	background: #fff;
+	position: absolute;
+}
+
+.moon-2 {
+	background: #525252;
+	position: absolute;
+	top: -20px;
+	left: -20px;
+}
